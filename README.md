@@ -1,7 +1,6 @@
 # 🍺 📦 Brewfile
 
-This is my personal Brewfile to setup my working environment.  
-_This is still a WIP project and needs to be cleaned up__
+This is my personal Brewfile to setup my working environment for my work MacBook.
 
 ## Installation
 
