@@ -95,7 +95,7 @@ cask "hoppscotch"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Tool to prevent the system from going into sleep mode
-cask "keepingyouawake""
+cask "keepingyouawake"
 # Support for Logitech G gear
 cask "logitech-g-hub"
 # Provides updates to various Microsoft products
