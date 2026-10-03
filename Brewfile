@@ -1,9 +1,5 @@
 tap "anomalyco/tap"
 tap "aws/tap"
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
-tap "homebrew/services"
 tap "stablyai/orca", trusted: { casks: ["orca"] }
 # Run your GitHub Actions locally
 brew "act"
