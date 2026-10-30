@@ -1,10 +1,5 @@
 tap "anomalyco/tap"
-tap "aws/tap"
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
-tap "homebrew/services"
-tap "stablyai/orca", trusted: { casks: ["orca"] }
+tap "stablyai/orca"
 # Run your GitHub Actions locally
 brew "act"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -41,18 +36,24 @@ brew "hadolint"
 brew "mas"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
+# Create, run, and share large language models (LLMs)
+brew "ollama", restart_service: :changed
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Fast, disk space efficient package manager
 brew "pnpm"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.14"
+# CLI proxy to minimize LLM token consumption
+brew "rtk"
 # Zsh prompt for Astronauts
 brew "spaceship"
 # Tool to enforce Swift style and conventions
 brew "swiftlint"
 # Vulnerability scanner for container images, file systems, and Git repos
 brew "trivy"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Internet file retriever
 brew "wget"
 # JavaScript package manager
@@ -63,16 +64,20 @@ brew "yq"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# The AI coding agent built for the terminal.
-brew "anomalyco/tap/opencode", trusted: true
+# OpenCode V2 - the AI coding agent for the terminal
+brew "anomalyco/tap/opencode-v2", trusted: true
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Command-line interface for 1Password
+cask "1password-cli"
 # Apple TV Aerial screensaver
 cask "aerial"
 # Enable Windows-like alt-tab
 cask "alt-tab"
 # Web browser focusing on privacy
-cask "brave-browser@beta"
+cask "brave-browser"
+# Anthropic's official Claude AI desktop app
+cask "claude"
 # Terminal-based AI coding assistant
 cask "claude-code"
 # Brings the power of Copilot coding agent directly to your terminal
@@ -100,8 +105,6 @@ cask "keepingyouawake"
 cask "logitech-g-hub"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
-# Multi-platform web browser
-cask "microsoft-edge"
 # Office suite
 cask "microsoft-office"
 # Meet, chat, call, and collaborate in just one place
@@ -110,6 +113,8 @@ cask "microsoft-teams"
 cask "notunes"
 # Finds large, unwanted files and deletes them
 cask "omnidisksweeper"
+# IDE for orchestrating AI coding agents across terminals and worktrees
+cask "stablyai/orca/orca", trusted: true
 # Collaboration platform for API development
 cask "postman"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -120,6 +125,8 @@ cask "rocket-chat"
 cask "safari-technology-preview"
 # Team communication and collaboration software
 cask "slack"
+# Music streaming service
+cask "spotify"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
 # JDK from the Eclipse Foundation (Adoptium)
@@ -130,23 +137,18 @@ cask "temurin@8"
 cask "thaw"
 # Mutes your keyboard while you type
 cask "unclack"
+# Open-source code editor
+cask "visual-studio-code"
 # Binary releases of VS Code without MS branding/telemetry/licensing
 cask "vscodium"
 mas "Apple Configurator", id: 1037126344
 mas "Keynote", id: 361285480
 mas "Numbers", id: 361304891
 mas "Pages", id: 361309726
-mas "Quick JIRA", id: 0
-mas "Tag Remover for Amazon", id: 0
 mas "Tampermonkey Classic", id: 1482490089
-mas "TestFlight", id: 899247664
 mas "The Unarchiver", id: 425424353
 mas "Windows App", id: 1295203466
 mas "Xcode", id: 497799835
-vscode "dbaeumer.vscode-eslint"
-vscode "esbenp.prettier-vscode"
-vscode "streetsidesoftware.code-spell-checker"
-npm "@adobe/aio-cli"
-npm "@oneaudi/core-tooling"
-npm "@oneaudi/oneaudi-os-react"
+vscode "ollama.ollama"
+npm "@agentclientprotocol/claude-agent-acp"
 npm "corepack"
